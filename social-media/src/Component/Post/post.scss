@@ -1,0 +1,103 @@
+@import '../../style.scss';
+
+.post{
+
+    @include themify($theme){
+       
+-webkit-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+-moz-box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+ box-shadow: 0px 0px 25px -10px rgba(0,0,0,0.38);
+ 
+border-radius:10px;
+background-color:var(--bg);
+color:var(--textColor);
+
+
+
+    .container{
+        padding: 20px;
+        
+      @include  mobile{
+           
+           width: 75%;
+            overflow: hidden;
+            padding: 10px;
+            margin-right: 1px;
+           
+         }
+
+         
+
+        .user{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            .userInf{
+                display: flex;
+                gap: 20px;
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+
+                }
+                .detail{
+                    display: flex;
+                    flex-direction: column;
+                    .name{
+                        font-weight: 500;
+                        margin-right: 10px;
+
+                    }
+                    .date{
+                        font-size: 12px;
+
+                    }
+
+                }
+            }
+            button{
+                position: absolute;
+                top: 30px;
+                right:0;
+                border: none;
+                  background-color: #f0544f;
+                 color: white;
+                 padding: 5px;
+                 font-size: medium;
+                 cursor: pointer;
+            }
+        }
+        .content{
+            margin: 20px 0px;
+        
+            img{
+                width: 100%;
+                max-height: 500px; 
+                object-fit: cover;
+                margin-top: 20px;
+            }
+        }
+        .info{
+            display: flex;
+            // justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            .item{
+                display: flex;
+                 align-items: center;
+                  gap: 10px;
+                  cursor: pointer;
+                  font-size: 14px;
+                 
+             
+
+            }
+        }
+
+    }
+    }
+}

@@ -1,0 +1,100 @@
+@import "../../style.scss";
+.rightBar{
+  @include themify($theme){
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    background-color: var(--bgSoft);
+    overflow: scroll;
+    color: var(--textColor);
+     @include  mobile{
+          display: none;
+        }
+         @include  tablet{
+          display: none;
+        }
+   
+    
+  &::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+    .container{
+        padding: 20px;
+
+        .item{
+            box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
+-webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
+-moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
+padding :20px;
+margin-bottom: 20px;
+background-color: var(--bg);
+
+            span{
+                color: var(--textColor);
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+
+
+                .userInfo{
+                    display: flex;
+                align-items: center;
+                margin: 5px 0px;
+                position: relative;
+
+                .online{
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background-color: limegreen;
+                  position: absolute;
+                  top: 0;
+                  left: 30px;
+                
+                }
+                p{
+                  color: var(--textColorSoft);
+                }
+                
+                span{
+                    font-size: 14px;
+                    color:var(--textColor) ;
+                }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+              
+                }
+                      .buttons{
+                        display: flex;
+                align-items: center;
+                gap: 10px;
+
+                button{
+                    border: none;
+                    cursor: pointer;
+                    padding: 5px;
+                 color: white;
+                  &:first-child{
+                    background-color: #5271ff;
+                  }
+                    &:last-child{
+                    background-color:#ff0044;
+                  }
+                }
+
+                    }
+            }
+        }
+    }
+}
+}
