@@ -10,8 +10,9 @@ import cors from "cors";
 import multer from "multer";
 import relationshipRouter from "./routes/relationship.js"
 import { db } from "./connection.js";
+import "dotenv/config";
 
-dotenv.config();
+
 
 const app = express()
 // middleware 

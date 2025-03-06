@@ -1,6 +1,7 @@
 
 import { db } from "../connection.js";
 import jwt from "jsonwebtoken";
+import "dotenv/config";
  export const getUser = (req, res) => {
   const userid = req.params.userid;
 
@@ -21,7 +22,7 @@ export const updateUser = (req, res) => {
   const token = req.cookies.accessToken;
   if (!token) return res.status(401).json("Not logged in");
 
-  jwt.verify(token, "secretkey", (err, userInfo) => {
+  jwt.verify(token, "process.env.SECRETKEY", (err, userInfo) => {
     if (err) return res.status(403).json("Token is not valid");
 
     const q = `
@@ -65,7 +66,7 @@ export const getAllUser = (req, res) => {
   const token = req.cookies.accessToken;
   if (!token) return res.status(401).json("Not logged in");
 
-  jwt.verify(token, "secretkey", (err, userInfo) => {
+  jwt.verify(token, "process.env.SECRETKEY", (err, userInfo) => {
     if (err) return res.status(403).json("Token is not valid");
 
     const currentUserId = userInfo.id; // Extract user ID from token

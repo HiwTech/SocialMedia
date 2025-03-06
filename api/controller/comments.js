@@ -1,6 +1,7 @@
 import { db } from "../connection.js";
 import jwt from "jsonwebtoken";
 import moment from "moment";
+import "dotenv/config";
 
 export const getComments = (req, res) => {
   const q = `SELECT c.*, u.id AS userid, name, profilePic FROM comment AS c JOIN users AS u ON (u.id = c.userid)

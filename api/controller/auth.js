@@ -2,6 +2,9 @@ import {db} from '../connection.js'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken';
 import cookie from 'cookie-parser'
+import "dotenv/config";
+
+
 
 export const register = (req, res) => {
 // check user exists
@@ -52,7 +55,9 @@ export const login = async (req, res) => {
         return res.status(400).json("Wrong password");
 
       // Generate JWT
-      const token = jwt.sign({ id: data[0].id }, "secretkey");
+      const token = jwt.sign({ id: data[0].id }, process.env.SECRETKEY);
+
+
 
       // Exclude the password from the response
       const { password, ...others } = data[0];
