@@ -57,7 +57,14 @@ function Users() {
               </td>
               <td>
                 {user.profilePic ? (
-                  <img src={user.profilePic} alt={`${user.name}'s profile`} />
+                  <img
+                    src={
+                      user.profilePic.startsWith("http")
+                        ? user.profilePic
+                        : "/upload/" + user.profilePic
+                    }
+                    alt={`${user.name}'s profile`}
+                  />
                 ) : (
                   "No Profile Picture"
                 )}

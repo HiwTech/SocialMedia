@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
+import loginImg from "../../img/login.png";
 
 
 const Share = () => {

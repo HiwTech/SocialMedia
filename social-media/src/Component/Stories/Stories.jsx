@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './stories.scss'
 import React from 'react'
 import { AuthContext } from "../../context/authContext"
+import loginImg from "../../img/login.png";
 
 function Stories() {
     const {currentUser} = useContext(AuthContext)
