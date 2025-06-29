@@ -88,9 +88,9 @@ This project helped me:
 
 ## 📌 Future Improvements
 
-* Follow/Unfollow system
+* Real-time chat (Socket.IO)
 
-* Dark mode
+* Notifications
 
 ## 🙋‍♀️ About Me
 
