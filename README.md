@@ -54,7 +54,7 @@ SocialMedia/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/SocialMedia.git
+   git clone https://github.com//HiwTech/SocialMedia.git
    cd SocialMedia
    ```
 
@@ -96,7 +96,6 @@ This project helped me:
 
 I'm **Hiwot Z.**, a full-stack developer passionate about building intuitive and meaningful web apps. This project is part of my journey toward becoming a skilled, production-ready developer.
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/yourprofile/) or check out more on my [portfolio](https://yourportfolio.com).
 
 
 
